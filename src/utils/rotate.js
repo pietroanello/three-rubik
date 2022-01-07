@@ -22,7 +22,7 @@ const rotate = (stringMoves, globalScene) => {
     const angle = detectAngle(move)
     const arr = []
     globalScene.children.forEach(cube => {
-      if (sides[move[0]](cube.position)) {
+      if (sides[move[0]](cube.position) && cube.name !== 'pivot') {
         arr.push(cube)
       }
     })
